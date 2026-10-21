@@ -1,9 +1,9 @@
-# Casos de prueba de caja negra — Hito 3 TQA
+﻿# Casos de prueba de caja negra — Hito 3 TQA
 
 **Aplicación bajo prueba:** SauceDemo (Swag Labs) — https://www.saucedemo.com/
 **Cuenta de demostración:** `standard_user` / `secret_sauce`
 **Ambiente:** QA (sitio público de demostración) · Navegador Chromium 1440×900
-**Ejecutado por:** Yuri Jesús (GitHub: mew145)
+**Ejecutado por:** Yuri Rojas (GitHub: mew145)
 **Fecha de ejecución:** 20/10/2026 21:26
 **Automatización de la ejecución:** `scripts/ejecutar_pruebas.py` (Playwright) · resultados en `scripts/resultados.json`
 
@@ -63,7 +63,7 @@
 | Campo | Detalle |
 |---|---|
 | **ID del TC** | TC-001 |
-| **Ejecutado por** | Yuri Jesús (GitHub: mew145) |
+| **Ejecutado por** | Yuri Rojas (GitHub: mew145) |
 | **Fecha / hora** | 20/10/2026 21:26:15 |
 | **Ambiente / versión** | QA — saucedemo.com (build en línea) |
 | **Resultado** | ✅ **PASS** |
@@ -120,7 +120,7 @@
 | Campo | Detalle |
 |---|---|
 | **ID del TC** | TC-002 |
-| **Ejecutado por** | Yuri Jesús (GitHub: mew145) |
+| **Ejecutado por** | Yuri Rojas (GitHub: mew145) |
 | **Fecha / hora** | 20/10/2026 21:26:19 |
 | **Ambiente / versión** | QA — saucedemo.com (build en línea) |
 | **Resultado** | ✅ **PASS** |
@@ -177,7 +177,7 @@
 | Campo | Detalle |
 |---|---|
 | **ID del TC** | TC-003 |
-| **Ejecutado por** | Yuri Jesús (GitHub: mew145) |
+| **Ejecutado por** | Yuri Rojas (GitHub: mew145) |
 | **Fecha / hora** | 20/10/2026 21:26:21 |
 | **Ambiente / versión** | QA — saucedemo.com (build en línea) |
 | **Resultado** | ✅ **PASS** |
@@ -235,7 +235,7 @@
 | Campo | Detalle |
 |---|---|
 | **ID del TC** | TC-004 |
-| **Ejecutado por** | Yuri Jesús (GitHub: mew145) |
+| **Ejecutado por** | Yuri Rojas (GitHub: mew145) |
 | **Fecha / hora** | 20/10/2026 21:26:23 |
 | **Ambiente / versión** | QA — saucedemo.com (build en línea) |
 | **Resultado** | ✅ **PASS** |
@@ -295,7 +295,7 @@
 | Campo | Detalle |
 |---|---|
 | **ID del TC** | TC-005 |
-| **Ejecutado por** | Yuri Jesús (GitHub: mew145) |
+| **Ejecutado por** | Yuri Rojas (GitHub: mew145) |
 | **Fecha / hora** | 20/10/2026 21:26:25 |
 | **Ambiente / versión** | QA — saucedemo.com (build en línea) |
 | **Resultado** | ✅ **PASS** |

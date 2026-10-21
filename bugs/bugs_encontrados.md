@@ -1,8 +1,8 @@
-# Registro de defectos (bugs) — Hito 3 TQA
+﻿# Registro de defectos (bugs) — Hito 3 TQA
 
 **Aplicación:** SauceDemo (Swag Labs) — https://www.saucedemo.com/
 **Fecha de detección:** 20/10/2026
-**Detectado por:** Yuri Jesús (GitHub: mew145)
+**Detectado por:** Yuri Rojas (GitHub: mew145)
 
 > **Regla aplicada:** si la prueba pasa, se registra PASS y **no** se inventa un bug. Solo se documentan defectos **reproducibles** con evidencia.
 

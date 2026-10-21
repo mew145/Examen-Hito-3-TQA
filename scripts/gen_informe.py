@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 """
 Examen Practico Hito 3 - TQA
 Genera el informe final en Word (entregable/informe_hito3.docx) a partir de:
@@ -20,7 +20,7 @@ RAIZ = pathlib.Path(__file__).resolve().parent.parent
 SALIDA = RAIZ / "entregable" / "informe_hito3.docx"
 DATOS = RAIZ / "scripts" / "resultados.json"
 
-ESTUDIANTE = "Yuri Jesús (GitHub: mew145)"
+ESTUDIANTE = "Yuri Rojas (GitHub: mew145)"
 DOCENTE = "Mg. Reynel Sánchez"
 MATERIA = "Testing & Quality Assurance (TQA) - Hito 3"
 FECHA_INFORME = "20/10/2026"

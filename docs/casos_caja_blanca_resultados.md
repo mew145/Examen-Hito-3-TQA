@@ -1,8 +1,8 @@
-# Ejecución de los casos de caja blanca — Hito 3 TQA
+﻿# Ejecución de los casos de caja blanca — Hito 3 TQA
 
 **Script:** `scripts/validar_compra.py` (ejecuta la función `validar_compra` real en Python)
 **Fecha de ejecución:** 20/10/2026
-**Ejecutado por:** Yuri Jesús (GitHub: mew145)
+**Ejecutado por:** Yuri Rojas (GitHub: mew145)
 
 ```
 ID      Entradas                                            Esperado                        Obtenido                        Estado  Cubre

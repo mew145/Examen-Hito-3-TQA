@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 """
 Examen Practico Hito 3 - TQA
 Rellena la plantilla unificada de casos de prueba (Plantilla_TC_Unificada_TQA.docx)
@@ -30,7 +30,7 @@ PLANTILLA = RAIZ / "docs" / "Plantilla_TC_Unificada_TQA.docx"
 DATOS = RAIZ / "scripts" / "resultados.json"
 SALIDA = RAIZ / "docs" / "casos_caja_negra_plantilla_llena.docx"
 
-EJECUTADO_POR = "Yuri Jesús (GitHub: mew145)"
+EJECUTADO_POR = "Yuri Rojas (GitHub: mew145)"
 
 
 def set_cell(cell, texto):

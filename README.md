@@ -1,4 +1,4 @@
-# Examen Práctico Hito 3 — Testing & Quality Assurance (TQA)
+﻿# Examen Práctico Hito 3 — Testing & Quality Assurance (TQA)
 
 Repositorio individual del **examen práctico Hito 3**: caja negra, caja blanca, Gherkin, registro de defectos y organización del trabajo con Git/GitHub.
 
