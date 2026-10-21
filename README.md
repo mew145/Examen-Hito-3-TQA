@@ -73,4 +73,11 @@ powershell -ExecutionPolicy Bypass -File scripts/convertir_a_pdf.ps1   # Word ->
 
 ## Seguimiento del trabajo
 
-Las tareas y los defectos se gestionaron con **Issues** y un **Project Board** (columnas To Do / In Progress / In Review / Done) en la pestaña *Projects* del repositorio.
+Las tareas y los defectos se gestionaron con **Issues** ( [#1](https://github.com/mew145/Examen-Hito-3-TQA/issues/1) a [#12](https://github.com/mew145/Examen-Hito-3-TQA/issues/12) ), creados desde la terminal con `gh` (`scripts/crear_issues.ps1`):
+
+- **#1 y #12** → defecto BUG-001 (label `bug`)
+- **#2 a #11** → tareas del examen (label `tarea`), cerradas con el comentario de su finalización
+
+**Project Board:** no se configuró un tablero Projects; el seguimiento del avance quedó registrado en los Issues (todas las tareas creadas y cerradas con su comentario de finalización).
+
+**Colaborador:** el docente (**@Reynel7** — Reynel Sánchez) fue invitado como colaborador con permisos de escritura desde la terminal (`gh api .../collaborators`). La invitación por el correo institucional `doc.reynel.sanchez.ch@unifranz.edu.bo` no fue posible vía API porque GitHub exige que el correo esté verificado y asociado a una cuenta; en ese caso la invitación por correo debe enviarse desde *Settings → Collaborators* en la web.
