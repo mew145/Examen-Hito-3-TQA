@@ -1,0 +1,28 @@
+{
+  "fecha": "20/10/2026 21:25",
+  "verificaciones": [
+    {
+      "id": "EX-1",
+      "escenario": "Checkout con campos (nombre, apellido y codigo postal) que contienen solo espacios en blanco",
+      "esperado": "El formulario deberia rechazar valores sin contenido real y mostrar 'Error: First Name is required'",
+      "obtenido": "Se aceptaron los campos con solo espacios y se avanzo al resumen de la compra",
+      "capturas": [
+        "expl_01_checkout_solo_espacios.png",
+        "expl_01b_resultado_espacios.png"
+      ],
+      "reproducible": true
+    },
+    {
+      "id": "EX-2",
+      "escenario": "Tras cerrar sesion, usar el boton 'Atras' del navegador",
+      "esperado": "No debe mostrarse el catalogo sin una sesion activa",
+      "obtenido": "La sesion caduco y se redirige al login",
+      "capturas": [
+        "expl_02_logout.png",
+        "expl_03_tras_logout_atras.png"
+      ],
+      "reproducible": false,
+      "nota": "Tras logout se estaba en la pagina de login: True"
+    }
+  ]
+}

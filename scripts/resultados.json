@@ -1,0 +1,137 @@
+{
+  "fecha_ejecucion": "20/10/2026 21:26",
+  "casos": [
+    {
+      "id": "TC-001",
+      "titulo": "Inicio de sesion con credenciales validas",
+      "fecha": "20/10/2026 21:26:15",
+      "pasos": [
+        {
+          "paso": "Ingresar standard_user / secret_sauce",
+          "esperado": "Acceso al catalogo",
+          "obtenido": "https://www.saucedemo.com/inventory.html"
+        }
+      ],
+      "estado": "PASS",
+      "observacion": "Redirige a la pagina de inventario (inventory.html) y muestra el catalogo de productos. Contador de carrito visible: False (vacio al iniciar).",
+      "capturas": [
+        "evid_tc001_01_login_exitoso.png",
+        "evid_tc001_02_catalogo.png"
+      ],
+      "bug": null
+    },
+    {
+      "id": "TC-002",
+      "titulo": "Inicio de sesion con credenciales invalidas",
+      "fecha": "20/10/2026 21:26:19",
+      "pasos": [
+        {
+          "paso": "Ingresar clave incorrecta",
+          "esperado": "Mensaje de error y permanecer en login",
+          "obtenido": "Epic sadface: Username and password do not match any user in this service"
+        }
+      ],
+      "estado": "PASS",
+      "observacion": "Se muestra el error 'Epic sadface: Username and password do not match any user in this service' y el usuario NO accede al catalogo. Icono (X) rojo presente en los campos usuario y clave.",
+      "capturas": [
+        "evid_tc002_01_error_login.png",
+        "evid_tc002_02_persiste_login.png"
+      ],
+      "bug": null
+    },
+    {
+      "id": "TC-003",
+      "titulo": "Agregar un producto al carrito",
+      "fecha": "20/10/2026 21:26:21",
+      "pasos": [
+        {
+          "paso": "Agregar 'Sauce Labs Backpack'",
+          "esperado": "Badge = 1 y boton 'Remove'",
+          "obtenido": "Badge=1, boton=Remove"
+        }
+      ],
+      "estado": "PASS",
+      "observacion": "El badge del carrito muestra '1', el boton cambia a 'Remove' y el item 'Sauce Labs Backpack' aparece en la pagina del carrito.",
+      "capturas": [
+        "evid_tc003_01_producto_agregado.png",
+        "evid_tc003_02_carrito.png"
+      ],
+      "bug": null
+    },
+    {
+      "id": "TC-004",
+      "titulo": "Eliminar un producto desde el carrito",
+      "fecha": "20/10/2026 21:26:23",
+      "pasos": [
+        {
+          "paso": "Eliminar 'Sauce Labs Bike Light' desde el carrito",
+          "esperado": "Badge desaparece y lista vacia",
+          "obtenido": "badge_antes=1, badge_despues=0, items=0"
+        }
+      ],
+      "estado": "PASS",
+      "observacion": "Antes de eliminar el badge mostraba 1; al eliminar el producto el badge desaparece (elementos restantes en el carrito: 0) y el carrito queda vacio.",
+      "capturas": [
+        "evid_tc004_01_carrito_con_item.png",
+        "evid_tc004_02_item_eliminado.png"
+      ],
+      "bug": null
+    },
+    {
+      "id": "TC-005",
+      "titulo": "Completar el proceso de checkout",
+      "fecha": "20/10/2026 21:26:25",
+      "pasos": [
+        {
+          "paso": "Llenar datos y finalizar compra",
+          "esperado": "'Thank you for your order!'",
+          "obtenido": "Thank you for your order!"
+        }
+      ],
+      "estado": "PASS",
+      "observacion": "Mensaje final: 'Thank you for your order!'. Detalle: 'Your order has been dispatched, and will arrive just as fast as the pony can get there!'. Se regresa al catalogo con 'Back Home'.",
+      "capturas": [
+        "evid_tc005_01_formulario_checkout.png",
+        "evid_tc005_02_resumen.png",
+        "evid_tc005_03_compra_finalizada.png"
+      ],
+      "bug": null
+    }
+  ],
+  "exploracion": [
+    {
+      "id": "EX-1",
+      "escenario": "Checkout con campos (nombre, apellido y codigo postal) que contienen solo espacios en blanco",
+      "esperado": "El formulario deberia rechazar valores sin contenido real y mostrar 'Error: First Name is required'",
+      "obtenido": "Se aceptaron los campos con solo espacios y se avanzo al resumen de la compra",
+      "capturas": [
+        "expl_01_checkout_solo_espacios.png",
+        "expl_01b_resultado_espacios.png"
+      ],
+      "reproducible": true
+    },
+    {
+      "id": "EX-2",
+      "escenario": "Tras cerrar sesion, usar el boton 'Atras' del navegador",
+      "esperado": "No debe mostrarse el catalogo sin una sesion activa",
+      "obtenido": "La sesion caduco y se redirige al login",
+      "capturas": [
+        "expl_02_logout.png",
+        "expl_03_tras_logout_atras.png"
+      ],
+      "reproducible": false,
+      "nota": "Tras logout se estaba en la pagina de login: True"
+    },
+    {
+      "id": "EX-3",
+      "escenario": "Ordenar el catalogo de Z a A y luego agregar el primer producto al carrito",
+      "esperado": "El ordenamiento 'Name (Z to A)' deberia conservarse tras la accion",
+      "obtenido": "El ordenamiento se conserva (primero: Test.allTheThings() T-Shirt (Red))",
+      "capturas": [
+        "expl_04_orden_za.png",
+        "expl_05_orden_tras_agregar.png"
+      ],
+      "reproducible": false
+    }
+  ]
+}
