@@ -203,6 +203,7 @@ def construir():
     doc.add_paragraph()
     for texto in (
         f"Aplicacion bajo prueba: {URL}",
+        "Repositorio del proyecto: https://github.com/mew145/Examen-Hito-3-TQA",
         f"Estudiante: {ESTUDIANTE}",
         f"Docente: {DOCENTE}",
         f"Materia: {MATERIA}",
@@ -222,7 +223,8 @@ def construir():
         "pruebas funcionales. Se disenaron y ejecutaron 5 casos de prueba de caja negra, se "
         "analizo un fragmento de codigo en Python con tecnicas de caja blanca, se redactaron "
         "escenarios Gherkin y se documentaron los defectos reproducibles encontrados, todo ello "
-        "organizado en un repositorio individual de GitHub con Issues y Project Board."
+        "organizado en un repositorio individual de GitHub (https://github.com/mew145/Examen-Hito-3-TQA) "
+        "con commits descriptivos e Issues de seguimiento."
     )
     doc.add_paragraph("Cuentas de demostracion utilizadas: standard_user / secret_sauce (las indicadas en el propio sitio).")
 
@@ -390,8 +392,56 @@ def construir():
     r.font.name = "Consolas"
     r.font.size = Pt(9)
 
-    # ---------------- 6. Conclusiones ----------------
-    titulo(doc, "6. Conclusiones", 1)
+    # ---------------- 6. Organizacion en GitHub ----------------
+    titulo(doc, "6. Organizacion del trabajo en GitHub", 1)
+    doc.add_paragraph(
+        "Todo el trabajo quedo versionado y documentado en un repositorio individual:"
+    )
+    tabla(doc, [
+        ("Repositorio", "https://github.com/mew145/Examen-Hito-3-TQA"),
+        ("Rama principal", "main"),
+        ("Estudiante (propietario)", "mew145 - Yuri Rojas"),
+        ("Colaborador (docente)", "@Reynel7 (Reynel Sanchez), permisos de escritura (invitacion aceptada)"),
+        ("Nota sobre el correo", "La invitacion al correo doc.reynel.sanchez.ch@unifranz.edu.bo no es "
+                                 "posible mediante la API porque GitHub exige que el correo este verificado "
+                                 "y asociado a una cuenta; por eso se invito al usuario del docente."),
+    ])
+    doc.add_paragraph("Estructura del repositorio:").runs[0].bold = True
+    estructura = doc.add_paragraph()
+    r = estructura.add_run(
+        "Examen-Hito-3-TQA/\n"
+        "├── README.md\n"
+        "├── docs/            casos_caja_negra.md, plantilla completada (.docx), analisis_caja_blanca.md,\n"
+        "│                    casos_caja_blanca_resultados.md, escenarios_gherkin.md\n"
+        "├── bugs/            bugs_encontrados.md (BUG-001)\n"
+        "├── evidencias/      capturas/ (12 capturas de pantalla)\n"
+        "├── entregable/      informe_hito3.pdf, casos_prueba_caja_negra.pdf\n"
+        "└── scripts/         ejecucion de pruebas (Playwright), caja blanca e informes"
+    )
+    r.font.name = "Consolas"
+    r.font.size = Pt(9)
+    doc.add_paragraph("Issues de seguimiento (creados desde la terminal con gh):").runs[0].bold = True
+    tabla_pasos(doc, ["Issue", "Titulo", "Label", "Estado"], [
+        ("#1 / #12", "BUG-001: el checkout acepta campos con solo espacios en blanco", "bug", "Cerrado (documentado)"),
+        ("#2", "Disenar 5 casos de prueba de caja negra", "tarea", "Cerrado"),
+        ("#3", "Ejecutar los casos de caja negra en SauceDemo", "tarea", "Cerrado"),
+        ("#4", "Registrar capturas de evidencia", "tarea", "Cerrado"),
+        ("#5", "Analizar el codigo de caja blanca y determinar la cobertura", "tarea", "Cerrado"),
+        ("#6", "Ejecutar los casos de caja blanca (CB-001 a CB-004)", "tarea", "Cerrado"),
+        ("#7", "Redactar escenarios Gherkin (actividad adicional)", "tarea", "Cerrado"),
+        ("#8", "Documentar defectos reproducibles", "tarea", "Cerrado"),
+        ("#9", "Organizar el repositorio y el README", "tarea", "Cerrado"),
+        ("#10", "Preparar el informe final en PDF", "tarea", "Cerrado"),
+        ("#11", "Invitar al docente al repositorio", "tarea", "Cerrado"),
+    ])
+    doc.add_paragraph(
+        "Flujo de trabajo Git: trabajo realizado en la rama main con commits descriptivos "
+        "(docs:, test:, evidencias:, chore:) y subido con git push. El listado completo de "
+        "commits esta disponible en https://github.com/mew145/Examen-Hito-3-TQA/commits/main"
+    )
+
+    # ---------------- 7. Conclusiones ----------------
+    titulo(doc, "7. Conclusiones", 1)
     for c in (
         "Los 5 casos de caja negra fueron ejecutados sobre la aplicacion real y sus resultados se "
         "documentaron con evidencia (capturas) en el repositorio.",
@@ -400,8 +450,10 @@ def construir():
         "necesario para llegar al 100%.",
         "Las pruebas negativas validan que el sitio informa errores claros al usuario y bloquea el "
         "acceso no autorizado.",
-        "El trabajo esta versionado en Git/GitHub con commits descriptivos, Issues y Project Board "
-        "para el seguimiento de las tareas.",
+        "Se encontro y documento un defecto reproducible (BUG-001) de validacion de datos en el "
+        "checkout, el cual no compromete la compra pero si la calidad de la validacion de entradas.",
+        "El trabajo esta versionado en Git/GitHub con commits descriptivos e Issues de seguimiento "
+        "en https://github.com/mew145/Examen-Hito-3-TQA",
     ):
         doc.add_paragraph(c, style="List Bullet")
 
